@@ -3,7 +3,7 @@
 use Repositories\Db\Connection\GetConnection as Connection;
 use Repositories\Utils\Json\JsonReturn as JsonReturn;
 
-class UserAuthentication
+class ReadLeague
 {
     public function __construct($leagueId) {
 
@@ -17,7 +17,7 @@ class UserAuthentication
 
         if(null !== $DbConnection->connection) {
 
-            $leagueQuery = sprintf("SELECT * FROM league WHERE league_id = '%d' AND league_deleted = '0'", $leagueId);
+            $leagueQuery = sprintf("SELECT league_name, league_data FROM league WHERE league_id = '%d' AND league_deleted = '0'", $leagueId);
 
             $result = $DbConnection->connection->query($leagueQuery);
             $singleLeague = mysqli_fetch_all($result,MYSQLI_ASSOC);

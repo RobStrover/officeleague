@@ -25,8 +25,12 @@ function showAlert(alertType, message) {
         alertButton
     );
 
-    $('.league-container').append(
+    $('#league-container').append(
         alertParent
     );
 
+}
+
+function removeAllAlerts(){
+    $('.alert').remove();
 }

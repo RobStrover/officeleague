@@ -8,7 +8,7 @@ function leagueRefresher($leagueContainer){
             showSpinner();
             $.ajax({
                 type: 'POST',
-                dataType: "text",
+                dataType: "json",
                 url: "app/ajax_return.php",
                 data: {
                     function: 'getLeague',
@@ -16,6 +16,10 @@ function leagueRefresher($leagueContainer){
                 },
                 success: function (response) {
                     processResponse(response);
+                    var delay = 60*5*1000;
+                    setTimeout(function(){
+                        leagueRefresher($leagueContainer)
+                    }, delay);
                 }
             });
             hideSpinner();

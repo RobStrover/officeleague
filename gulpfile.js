@@ -6,6 +6,7 @@ gulp.task('default', function() {
     gulp.src([
         'js/lib/jquery.js',
         'js/lib/bootstrap.min.js',
+        'js/app/*'
     ])
         .pipe(concat('script.js'))
         .pipe(minify({
