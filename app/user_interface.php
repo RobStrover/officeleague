@@ -11,9 +11,11 @@
 
         require __DIR__."/../ui/league/league-view.php";
 
-    } else {
+    } else if(array_key_exists('login', $_GET)) {
 
         // Load the login window.
+
+        require __DIR__."/../ui/user/login.php";
 
     }
 
