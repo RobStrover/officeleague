@@ -27,7 +27,7 @@
                         </ul>
                     </li>
                     <?php } else { ?>
-                        <li><a href="#" id="sign-in-sign-up-button">Sign in / Sign up</a></li>
+                        <li><a href="<?= '//'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'?login' ?>" id="sign-in-sign-up-button">Sign in / Sign up</a></li>
                     <?php } ?>
 
 
