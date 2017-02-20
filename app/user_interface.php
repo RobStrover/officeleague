@@ -17,6 +17,12 @@
 
         require __DIR__."/../ui/user/login.php";
 
+    } else if(array_key_exists('signup', $_GET)) {
+
+        // Load the login window.
+
+        require __DIR__."/../ui/user/signup.php";
+
     }
 
 ?>
