@@ -1,4 +1,4 @@
-<?php namespace Repositories\Login\Authenticate;
+<?php namespace Repositories\User\Authentication;
 
 use Repositories\Db\Connection\GetConnection as Connection;
 

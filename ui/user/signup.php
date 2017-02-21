@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-sm-6 col-sm-push-6 signup-form-parent">
+        <div id="signup-form-parent" class="col-sm-6 col-sm-push-6">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="form-group">
@@ -23,7 +23,7 @@
                 <div class="col-sm-12">
                     <div class="checkbox">
                         <label>
-                            <input id="confirmedTerms" type="checkbox"> I confirm I have read and understood the terms <span class="hidden-xs">to the left</span><span class="visible-xs">below</span>
+                            <input id="inputConfirmedTerms" type="checkbox"> I confirm I have read and understood the terms <span class="hidden-xs">to the left</span><span class="visible-xs">below</span>
                         </label>
                     </div>
                     <button class="btn btn-block btn-primary">Sign Up</button>
