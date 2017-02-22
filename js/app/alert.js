@@ -1,11 +1,13 @@
 
-function showAlert(alertType, message) {
+function showAlert(alertType, message, alertTarget) {
 
-    alertType = alertType || 'alert-danger';
+    alertTarget = alertTarget || $('#league-container');
+
+    alertType = alertType || 'danger';
     message = message || 'Whoops... something went wrong!';
 
     var alertParent = getTag("<div/>",{
-        "class":"alert alert-"+alertType+" alert-dismissible fade in",
+        "class":"alert alert-"+alertType+" alert-dismissible animated flipInX",
         "role":"alert"
     }).append(getTag("<strong/>",{
         "text":message
@@ -25,12 +27,21 @@ function showAlert(alertType, message) {
         alertButton
     );
 
-    $('#league-container').append(
-        alertParent
-    );
+    if (alertTarget) {
+        alertTarget.append(
+            alertParent
+        );
+    }
 
 }
 
 function removeAllAlerts(){
     $('.alert').remove();
+}
+
+function removeAlert(alert) {
+    if(alert.length > 0) {
+        alert.remove();
+    }
+
 }

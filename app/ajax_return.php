@@ -20,7 +20,7 @@ if (array_key_exists('function', $_POST)) {
         case 'checkUsernameTaken':
             $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
             $usernameTaken = new checkUsernameTaken($username);
-            var_dump($usernameTaken->usernameStatus);
+            new JsonReturn($usernameTaken);
             break;
         default:
 

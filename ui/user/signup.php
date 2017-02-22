@@ -5,9 +5,11 @@
                 <div class="col-sm-12">
                     <div class="form-group">
                         <label for="inputUsername">Username</label>
-                        <input type="email" class="form-control" id="inputUsername">
+                        <input type="text" class="form-control" id="inputUsername">
                     </div>
                 </div>
+                </div>
+            <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label for="inputPassword">Password</label>
@@ -20,13 +22,15 @@
                         <input type="password" class="form-control" id="inputConfirmPassword">
                     </div>
                 </div>
+                </div>
+            <div class="row">
                 <div class="col-sm-12">
-                    <div class="checkbox">
+                    <div class="checkbox text-center">
                         <label>
                             <input id="inputConfirmedTerms" type="checkbox"> I confirm I have read and understood the terms <span class="hidden-xs">to the left</span><span class="visible-xs">below</span>
                         </label>
                     </div>
-                    <button class="btn btn-block btn-primary">Sign Up</button>
+                    <button id="signUpButton" class="btn btn-block btn-primary disabled">Sign Up</button>
                 </div>
             </div>
         </div>
