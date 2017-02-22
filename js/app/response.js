@@ -11,3 +11,17 @@ function processResponse(response) {
         buildLeague(response[0]);
     }
 }
+
+
+function processUsernameTakenResponse(response) {
+
+    var inputUsername = $("#signup-form-parent").find('#inputUsername');
+
+    removeAlert(inputUsername.parent('.form-group').find('.alert'));
+
+    if(response.usernameStatus == "available") {
+        showAlert('success','Username is available',inputUsername.parent('.form-group'));
+    } else {
+        showAlert('danger','Username is not available',inputUsername.parent('.form-group'));
+    }
+}
